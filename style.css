@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    overflow: hidden;
+    background-color: #000; /* Pure black background */
+  }
+  
+  .sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation: fall linear infinite;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6); /* Glow effect */
+  }
+  
+  @keyframes fall {
+    0% {
+      opacity: 1;
+      transform: translateY(-100px); /* Start above the viewport */
+    }
+    100% {
+      opacity: 0.5; /* Slight fade as they fall */
+      transform: translateY(100vh); /* Move to the bottom of the screen */
+    }
+  }
+  
